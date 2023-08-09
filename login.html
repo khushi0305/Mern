@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .mycard{
+            width: 25%;
+            border-radius: 10px;
+            box-shadow: 2px 3px 5px 5px black;
+            padding: 50px;
+            /*padding-top: 60px;*/
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+        body{
+            display: flex;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://th.bing.com/th/id/OIP.Vr7I3lQtR6FhSarTtrkF0gHaEK?pid=ImgDet&rs=1");
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
+        .myinput{
+            display: block;
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border-bottom: 3px solid black;
+            /*border: none;*/
+            background-color: #eee;
+        }
+
+        .brand{
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-align: center;
+        }
+
+        .text{
+            text-align: center;
+        }
+
+        .mybtn{
+            width: 100%;
+            background-color: blueviolet;
+            padding: 10px 5px;
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 5px;
+            transition-property: all;
+            transition-duration: 300ms;
+        }
+        form{
+            margin-top: 50px;
+        }
+        
+        .mybtn:hover{
+            transform: scale(1.1) translateY(5px);
+            box-shadow: 0 -10px -5px #00000058;
+        }
+    </style>
+</head>
+<body>
+    <div class="mycard">
+        <p class="brand">Brand Logo</p>
+        <h2 class="text">Member Login</h2>
+        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ut soluta error assumenda exercitationem saepe, eligendi necessitatibus ipsam! Accusamus, dolores.</p>
+
+        <form>
+            <label for="email">Email</label>
+            <input class="myinput" type="email">
+
+            <label for="password">Password</label>
+            <input class="myinput" type="password">
+
+            <button class="mybtn">Login</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Form</title>
+    <style>
+        *{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;           
+        }
+        .myticket{
+            width: 25%;
+            border-radius: 20px;
+            box-shadow: 2px 4px 6px 8px rgb(102, 90, 90);
+            padding: 25px;
+            box-sizing: border-box;
+            background-image: linear-gradient(to bottom, #e18888,#f7ebeb);
+            font-size: larger;
+        }
+        .text{
+            text-decoration-line: underline overline;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            background-color: tomato;
+        }
+        .logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            font-size:x-large;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://images.cdn4.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823382.jpg");
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
+        .mybtn{
+            width: 50%;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            font-size: 25px;
+            background-color: red;
+            padding: 10px 5px;
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            transition-property: all;
+            transition-duration: 300ms;
+        }
+        form{
+            margin-top: 20px;
+        }
+        
+        .mybtn:hover{
+            transform: scale(1.1) translateY(5px);
+            box-shadow: 0 -10px -5px #00000058;
+        }
+        .end{
+            font-style:oblique;
+        }
+    </style>
+</head>
+<body>
+    <div class="myticket">
+        <h1 class="text">Book Your Show</h1>
+        <img class="logo" src="https://yt3.ggpht.com/a/AATXAJw5qeLQGR6cSlwaRNtRgnDli1gTRWsceDJKJw=s900-c-k-c0xffffffff-no-rj-mo">
+        <br>
+        <form>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name">
+            <br>
+            <br>
+            <label for="email">Enter your E-mail:</label>
+            <input type="email" id="email">
+            <br>
+            <br>
+            <label for="ph_no">Enter your Mobile No.:</label>
+            <input type="tel" id="ph_no">
+            <br>
+            <br>
+            <label for="ticket">No. of tickets:</label>
+            <input type="number" id="ticket">
+            <br>
+            <br>
+            <label for="ticket">No. of Adults:</label>
+            <input type="number" id="ticket">
+            <br>
+            <br>
+            <label for="ticket">No. of Children:</label>
+            <input type="number" id="ticket">
+            <br>
+            <br>
+            <label for="">Select a movie:</label>
+            <select>
+                <option value="choose">choose</option>
+                <option value="Oppenheimer">Oppenheimer</option>
+                <option value="RRR">RRR</option>
+                <option value="Jab we Met">Jab we Met</option>
+                <option value="Avengers">Avengers</option>
+            </select>
+            <br>
+            <br>
+            <label for="DOB">Date of Booking:</label>
+            <input type="date" id="DOB">
+            <br>
+            <br>
+            <label for="">Select your Slot:</label>
+            <input type="text" list="time">
+            <datalist id="time">
+                <option>10:00AM - 01:00PM</option>
+                <option value="02:00PM - 05:00PM"></option>
+                <option>07:00PM - 09:00PM</option>
+            </datalist>
+            <br>
+            <br>
+            <label for="">Select your Seats:</label>
+            <br>
+            <label>
+                <input type="radio" name="seat" value="Front row">Front Row
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="seat" value="Middle row">Middle Row
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="seat" value="Back Row">Back Row
+            </label>
+            <br>
+            <br>
+            <button class="mybtn">Submit & Pay</button>
+            <h5 class="end">*Money will not be refunded once paid.</h5>
+        </form>
+    </div>
+</body>
+</html>

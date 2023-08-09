@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+</head>
+<style>
+        *{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .mysign{
+            width: 25%;
+            border-radius: 15px;
+            box-shadow: 2px 2px 4px 5px black;
+            padding: 25px;
+            box-sizing: border-box;
+            background-color:transparent;
+        }
+        .text{
+            text-align: center;
+            text-decoration-line: underline;
+        }
+        .myinput{
+            display: block;
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border-bottom: 3px solid black;
+            /*border: none;*/
+            background-color: #eee;
+            font-size: x-large;
+        }
+        body{
+            display: flex;
+            margin: 0;
+            font-size:x-large;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://i.pinimg.com/originals/e4/eb/fc/e4ebfcecd9f98777edd2611f699cdccb.png");
+            background-size: cover;
+            color: beige;
+            backdrop-filter: blur(10px);
+        }
+        .mybtn{
+            width: 70%;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            font-size: 25px;
+            background-color:cadetblue;
+            padding: 10px 5px;
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            transition-property: all;
+            transition-duration: 300ms;
+        }
+        .mybtn:hover{
+            transform: scale(1.1) translateX(10px);
+            box-shadow: 0 -10px -5px #00000058;
+        }
+        .divider {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .divider::before, .divider::after {
+            flex: 1;
+            content: '';
+            padding: 3px;
+            background-color: beige;
+            margin: 5px;
+        }
+        .mylogo{
+            transition-property: all;
+            transition-duration: 200ms; 
+        }
+        .mylogo:hover{
+            transform: scale(1.1) translateX(10px);
+            box-shadow: 0 -10px -5px #00000058;
+        }
+        input.largerCheckbox {
+            width: 20px;
+            height: 20px;
+        }
+        a:link {
+  color: lightblue;
+}
+a:visited {
+  color: darkkhaki;
+}      
+a:hover {
+  color: lightblue;
+}
+</style>
+<body>
+    <div class="mysign">
+        <h1 class="text">SIGN IN</h1>
+        <p class="text">Sign-In to your Account</p>
+        <form>
+            <label for="email">E-mail id: </label>
+            <br>
+            <input class="myinput" id="email">
+            <br>
+            <br>
+            <label for="name">Username: </label>
+            <br>
+            <input class="myinput" id="naame">
+            <br>
+            <br>
+            <label for="password">Password: </label>
+            <br>
+            <input class="myinput" id="password">
+            <label>
+                <input type="checkbox" name="" class="largerCheckbox" value="Me">Remember Me
+            </label>
+            <br>
+            <br>
+            <button class="mybtn">Sign-in</button>
+            <button class="mybtn">Forgot Password?</button>
+            <br>
+            <p class="divider">Or Sign-in with</p>
+            <img class="mylogo" src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" width="270px" height="200px">
+            <img class="mylogo" src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" width="300px" height="210px">
+            <img class="mylogo" src="https://cdn.freebiesupply.com/logos/large/2x/linkedin-icon-logo-png-transparent.png" width="230px" height="228px">
+            <br>
+            <br>
+            <p class="text">Create a new Account?
+                <a href="signup.html">Sign-up</a>.
+            </p>
+        </form>
+    </div>
+</body>
+</html>
