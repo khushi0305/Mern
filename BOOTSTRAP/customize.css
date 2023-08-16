@@ -4,6 +4,10 @@ body{
     background-color: #f8f9fa;
 }
 
+.hco{
+    color: white;
+}
+
 .hco span{
     background-color: #975e3ff3;
 }
