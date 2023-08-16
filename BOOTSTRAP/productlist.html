@@ -22,10 +22,10 @@
 
     <header class="bg-dark text-white mb-5">
       <div class="container py-5">
-        <h1 class="text-center display-1 fw-bold">Best Camera Offers</h1>
-        <h3 class="text-center fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, temporibus.</h3>
+        <h1 class="text-center display-1 fw-bold site-title">Best Camera Offers</h1>
+        <h3 class="text-center fw-light sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, temporibus.</h3>
 
-        <div class="input-group mt-5 w-75 mx-auto">
+        <div class="input-group mt-5 w-75 mx-auto my-input">
           <input type="text" class="form-control form-control-lg">
           <button class="btn btn-warning"> <i class="fa-solid fa-magnifying-glass"></i> Search</button>
         </div>
@@ -59,17 +59,17 @@
             </div>
             <div class="col-md-3 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.uzjaAQl31weXPd197yk6zgHaGO?pid=ImgDet&rs=1" alt="camera">
+                    <img class="card-img-top" src="https://instax.com/common2/img/camera/camera_12_01.png" alt="camera">
                     <div class="card-body">
-                    <h4 class="text-muted">Nikon</h4>
-                    <h2>Digital Camera</h2>
+                    <h4 class="text-muted">Instax mini 12</h4>
+                    <h2>Polaroid Camera</h2>
 
                     <p>
                         <i class="fa-solid fa-star text-warning"></i>
-                        <span>4.2 Stars from <b>38585</b> Reviews</span>
+                        <span>4.0 Stars from <b>25468</b> Reviews</span>
                     </p>
 
-                    <h1 class="float-start">₹15,999</h1>
+                    <h1 class="float-start">₹12,999</h1>
                     </div>
                     <div class="card-footer">
                     <button class="btn btn-primary">
@@ -125,5 +125,39 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+<!-- javascript code -->
+    <script>
+      ScrollReveal().reveal('.site-title', {
+        delay: 300,
+        origin: 'top',
+        distance: '100px',
+        duration: 500,
+        scale: 0.5,
+        // rotate: {
+        //   x: 30,
+        //   y: 30,
+        //   z: 30
+        // }
+      });
+      ScrollReveal().reveal('.sub-title', {
+        delay: 300,
+        origin: 'right',
+        distance: '1000px',
+        duration: 500,
+        scale: 0.5
+      });
+      ScrollReveal().reveal('.my-input', {
+        delay: 300,
+        origin: 'left',
+        distance: '100px',
+      });
+      ScrollReveal().reveal('.card', {
+        delay: 300,
+        origin: 'bottom',
+        distance: '100px',
+        interval: 100
+      });
+    </script>
   </body>
 </html>
