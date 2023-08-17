@@ -17,6 +17,21 @@
     display: flex;
     align-items: center;
   }
+
+  .my-img{
+    height: 230px;
+    object-fit: contain;
+    /* background-color: red; */
+  }
+
+  .card{
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+  }
+
+  .card-body{
+    transform: translateZ(30px);
+  }
 </style>
   <body class="bg-dark">
 
@@ -38,7 +53,7 @@
         <div class="row">
             <div class="col-md-3 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.uzjaAQl31weXPd197yk6zgHaGO?pid=ImgDet&rs=1" alt="camera">
+                    <img class="card-img-top my-img" src="https://th.bing.com/th/id/OIP.uzjaAQl31weXPd197yk6zgHaGO?pid=ImgDet&rs=1" alt="camera">
                     <div class="card-body">
                     <h4 class="text-muted">Nikon</h4>
                     <h2>Digital Camera</h2>
@@ -59,7 +74,7 @@
             </div>
             <div class="col-md-3 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="https://instax.com/common2/img/camera/camera_12_01.png" alt="camera">
+                    <img class="card-img-top my-img" src="https://instax.com/common2/img/camera/camera_12_01.png" alt="camera">
                     <div class="card-body">
                     <h4 class="text-muted">Instax mini 12</h4>
                     <h2>Polaroid Camera</h2>
@@ -80,17 +95,17 @@
             </div>
             <div class="col-md-3 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.uzjaAQl31weXPd197yk6zgHaGO?pid=ImgDet&rs=1" alt="camera">
+                    <img class="card-img-top" src="https://petapixel.com/assets/uploads/2022/09/canon-5d-mark-iv-dslr.jpg" alt="camera">
                     <div class="card-body">
-                    <h4 class="text-muted">Nikon</h4>
+                    <h4 class="text-muted">Canon</h4>
                     <h2>Digital Camera</h2>
 
                     <p>
                         <i class="fa-solid fa-star text-warning"></i>
-                        <span>4.2 Stars from <b>38585</b> Reviews</span>
+                        <span>4.3 Stars from <b>45985</b> Reviews</span>
                     </p>
 
-                    <h1 class="float-start">₹15,999</h1>
+                    <h1 class="float-start">₹23,999</h1>
                     </div>
                     <div class="card-footer">
                     <button class="btn btn-primary">
@@ -101,17 +116,17 @@
             </div>
             <div class="col-md-3 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.uzjaAQl31weXPd197yk6zgHaGO?pid=ImgDet&rs=1" alt="camera">
+                    <img class="card-img-top" src="https://1.img-dpreview.com/files/p/C0x216S3840x2117T800x441~feature_blocks/26ef4f4596be4c02a1e09f27ac8495cc.jpeg" alt="camera">
                     <div class="card-body">
-                    <h4 class="text-muted">Nikon</h4>
+                    <h4 class="text-muted">Sony</h4>
                     <h2>Digital Camera</h2>
 
                     <p>
                         <i class="fa-solid fa-star text-warning"></i>
-                        <span>4.2 Stars from <b>38585</b> Reviews</span>
+                        <span>4.1 Stars from <b>32445</b> Reviews</span>
                     </p>
 
-                    <h1 class="float-start">₹15,999</h1>
+                    <h1 class="float-start">₹20,999</h1>
                     </div>
                     <div class="card-footer">
                     <button class="btn btn-primary">
@@ -157,6 +172,16 @@
         origin: 'bottom',
         distance: '100px',
         interval: 100
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      VanillaTilt.init( document.querySelectorAll('.card'), {
+        max: 20,
+        speed: 1000,
+        glare: true
       });
     </script>
   </body>
