@@ -1,51 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <style>
-        header{
+        header {
             height: 70vh;
             /* background-color: aqua; */
         }
 
-    .background--custom {
-      background: linear-gradient(90deg, #92bc03, #13a9dd, #674ea7);
-      background-size: 300% 300%;
-      animation: gradient 4s alternate infinite;
-      /* position: absolute;
+        .background--custom {
+            background: linear-gradient(90deg, #92bc03, #13a9dd, #674ea7);
+            background-size: 300% 300%;
+            animation: gradient 4s alternate infinite;
+            /* position: absolute;
       top: 0;
       left: 0; */
-      height: 70vh;
-      /* width: 100%; */
-    }
-    @keyframes gradient {
-      0% {
-        background-position: 0%;
-      }
-      100% {
-        background-position: 100%;
-      }
-    }
+            height: 70vh;
+            /* width: 100%; */
+        }
 
+        @keyframes gradient {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 100%;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body class="bg-body-secondary">
 
     <header class="background--custom">
         <!-- bg-warning -->
         <div class="container h-100 d-flex align-items-center">
-        
+
             <!-- can also add  bg-secondary below -->
             <div class="row w-100">
                 <!-- bg-danger -->
                 <div class="col-md-4 ">
-                    <img class="w-100 img-fluid rounded-circle" style="object-fit: cover; height: 50vh" src="IMG-20230103-WA0010~2.jpg" alt="image">
+                    <img class="w-100 img-fluid rounded-circle" style="object-fit: cover; height: 50vh;"
+                        src="IMG-20230103-WA0010~2.jpg" alt="image">
                 </div>
                 <!--can also add bg-success below-->
                 <div class="col-md-8 my-auto">
@@ -62,13 +67,27 @@
     <section>
 
         <div class="container py-5">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-4 text-center fw-bold mb-5">ABOUT ME</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias soluta magnam pariatur quibusdam eligendi iste officiis molestiae. Eos incidunt nemo minima iure asperiores praesentium doloremque temporibus voluptatum, facilis nihil fuga. Earum, nisi! Beatae nulla error temporibus vel, nesciunt, reprehenderit molestiae nobis vero laborum aut, cumque quaerat illum. Temporibus ullam iste blanditiis adipisci tempora laboriosam accusamus sequi ipsa tempore iure. Maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, corrupti blanditiis, quo maiores ipsum eaque odit, perspiciatis iure harum maxime vero aperiam dolore perferendis ad modi provident adipisci consequuntur. Omnis aliquam aliquid adipisci excepturi dolore sequi repudiandae id dicta nobis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h1 class="display-4 text-centerfw-bold mb-5">My Skills</h1>
+    <section>
+
+        <div class="container py-5">
+
+            <h1 class="display-4 text-center fw-bold mb-5">My Skills:</h1>
             <div class="row">
                 <div class="col-md-2">
                     <div class="card">
                         <div class="card-body">
-                            <img class="img-fluid" src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
+                            <img class="img-fluid"
+                                src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
                             <h4 class="text-center mt-4">HTML 5</h4>
                         </div>
                     </div>
@@ -76,7 +95,8 @@
                 <div class="col-md-2">
                     <div class="card">
                         <div class="card-body">
-                            <img class="img-fluid" src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
+                            <img class="img-fluid"
+                                src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
                             <h4 class="text-center mt-4">HTML 5</h4>
                         </div>
                     </div>
@@ -84,7 +104,8 @@
                 <div class="col-md-2">
                     <div class="card">
                         <div class="card-body">
-                            <img class="img-fluid" src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
+                            <img class="img-fluid"
+                                src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
                             <h4 class="text-center mt-4">HTML 5</h4>
                         </div>
                     </div>
@@ -92,7 +113,8 @@
                 <div class="col-md-2">
                     <div class="card">
                         <div class="card-body">
-                            <img class="img-fluid" src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
+                            <img class="img-fluid"
+                                src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
                             <h4 class="text-center mt-4">HTML 5</h4>
                         </div>
                     </div>
@@ -100,7 +122,8 @@
                 <div class="col-md-2">
                     <div class="card">
                         <div class="card-body">
-                            <img class="img-fluid" src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
+                            <img class="img-fluid"
+                                src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text.png">
                             <h4 class="text-center mt-4">HTML 5</h4>
                         </div>
                     </div>
@@ -112,25 +135,57 @@
 
     <section>
         <div class="=container py-5">
-            <h1 class="display-4 text-center fw-bold mb-5">My Projects</h1>
+            <h1 class="display-4 text-center fw-bold mb-5">My Projects:</h1>
 
             <div class="swiper myslider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <h1>Project 1</h1>
+                        <div class="card shadow border-0">
+                        <img class="card-img-top" src="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvamVjdHN8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+                        <div class="card-body">
+                            <p class="text-muted">Web Development</p>
+                            <h3>Blogging Website</h3>
+                            <button class="btn btn-primary">Demo</button>
+                            <button class="btn btn-dark">GitHub</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card shadow border-0">
+                            <img class="card-img-top" src="https://www.proofhub.com/articles/wp-content/uploads/2017/09/What-is-project-management.jpg">
+                            <div class="card-body">
+                                <p class="text-muted">Web Development</p>
+                                <h3>Blogging Website</h3>
+                                <button class="btn btn-primary">Demo</button>
+                                <button class="btn btn-dark">GitHub</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">                       
+                         <div class="card shadow border-0">
+                        <img class="card-img-top" src="https://www.projectmanager.com/wp-content/uploads/2021/10/211014_Blog_Feature_Project_Environment-scaled.jpg">
+                        <div class="card-body">
+                            <p class="text-muted">Web Development</p>
+                            <h3>Blogging Website</h3>
+                            <button class="btn btn-primary">Demo</button>
+                            <button class="btn btn-dark">GitHub</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card shadow border-0">
+                            <img class="card-img-top" src="https://classplusapp.com/growth/wp-content/uploads/2023/05/Exploring-The-Project-Method-Of-Teaching-%E2%80%93-A-New-Approach-For-Teachers-1.jpg">
+                            <div class="card-body">
+                                <p class="text-muted">Web Development</p>
+                                <h3>Blogging Website</h3>
+                                <button class="btn btn-primary">Demo</button>
+                                <button class="btn btn-dark">GitHub</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <h1>Project 2</h1>
-                </div>
-                <div class="swiper-slide">
-                    <h1>Project 3</h1>
-                </div>
-                <div class="swiper-slide">
-                    <h1>Project 4</h1>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
 
         </div>
     </section>
@@ -152,6 +207,9 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
