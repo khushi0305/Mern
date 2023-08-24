@@ -55,3 +55,8 @@ console.log(56+34+'23')        //concatenation
 console.log(4**2)           //Alternate of Math.pow
 
 console.log(25**0.5)        //Alternate for square root
+
+let name= "khushi"
+let hobby='singing'
+
+// console.log(~my name is ${name} and my hobby is ${hobby}~)
