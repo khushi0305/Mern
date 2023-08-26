@@ -59,4 +59,4 @@ console.log(25**0.5)        //Alternate for square root
 let name= "khushi"
 let hobby='singing'
 
-// console.log(~my name is ${name} and my hobby is ${hobby}~)
+console.log(`my name is ${name} and my hobby is ${hobby}`)

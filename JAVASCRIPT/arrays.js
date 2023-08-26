@@ -39,3 +39,10 @@ const nums =[34, 12, 65, 18, 89, 23, 29];
 
 nums.splice(3,3);
 console.log(nums);
+
+console.log( ...movies );            //... array se element ko bahar nikaalta hai(spread operator) now you can use these elements in other array
+console.log(movies);
+
+console.log([ 'first', ...movies, 'last' ]);     // using spread operator we can add more items in the array with affecting the actual array
+
+console.log([ ...movies.slice(0,2), movies.at(-1)]);
