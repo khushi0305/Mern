@@ -37,7 +37,11 @@ console.log(smartphones.colors);
 
 
 const smartphoneList = [
-    {brand : 'Redmi', model : 'Note 11', price : 18000, colors : ['white', 'red'] }
+    {brand : 'Redmi', model : 'Note 11', price : 18000, colors : ['white', 'blue']}, 
+    { brand : 'Samsung', model : 'M31', price : 19000, colors : ['white', 'blue', 'black'] },
+    { brand : 'Realme', model : '8', price : 15000, colors : ['black', 'yellow'] },
+    { brand : 'Oppo', model : 'F19', price : 17000, colors : ['blue', 'black', 'red'] },
+    { brand : 'Vivo', model : 'V20', price : 20000, colors : ['black', 'red', 'green'] }
 ];
 
 console.log(smartphoneList[0]);
@@ -53,5 +57,10 @@ console.log(smartphoneList[0]);
 
 //to access price of 3rd smartphone
 
+console.log(smartphoneList[2].price);
+
 
 //to increase the price of the second smartphone by 10%
+
+smartphoneList[1].price+= 0.1*smartphoneList[1].price;
+console.log(smartphoneList[1].price);
