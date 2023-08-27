@@ -50,3 +50,6 @@ console.log(smartphoneList[0].colors[1]);
 
 smartphoneList[0].model= 'Note 10 pro',
 console.log(smartphoneList[0]);
+
+//to access price of 3rd smartphone
+//to increase the price of the second smartphone by 10%
