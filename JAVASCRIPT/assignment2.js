@@ -4,11 +4,17 @@
 
 const n= [20, 35, 14, 67, 90];
 let num=[];
-for(let i=0; i< n.length; i++){
-    num[i]= n[i]**2;
+for(let i=0; i< n.length; i++)
+// {
+// //     num[i]= n[i]**2;
+// // }
+// // for(let i=0; i< num.length; i++){
+// // console.log(num[i]);}
+{
+    num.push(n[i]**2);
 }
-for(let i=0; i< num.length; i++){
-console.log(num[i]);}
+console.log(num);
+
 
 
 console.log('----------------------');
