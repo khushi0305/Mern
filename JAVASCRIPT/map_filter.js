@@ -2,13 +2,13 @@
 
 const nums= [2,5,20,8,3,4,7];
 //map
-const ans = nums.map((n) => {return n**2});
+const ans = nums.map((n) => {return n**2});        // map me we change for each element
 
 console.log(ans);
 
 
 //filter
-const ans2 = nums.filter((a) => {return a%2==0});
+const ans2 = nums.filter((a) => {return a%2==0});           // filters selective elements
 
 console.log(ans2);
 
