@@ -30,3 +30,5 @@ for(let i=0; i< even.length; i++){
     console.log(even[i]);
 }
 
+
+
