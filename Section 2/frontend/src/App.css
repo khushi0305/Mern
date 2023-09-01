@@ -4,3 +4,9 @@
   color: white;
   font-size: 50px;
 }
+
+.nav-item .active{
+  border-bottom: 2px solid wheat;
+  color: wheat !important;
+  font-weight: bold;
+}
