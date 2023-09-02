@@ -7,6 +7,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
 import EventHandling from './components/EventHandling';
+import Statemanagement from './components/Statemanagement';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login" element={ <Login /> } />
           <Route path="/signup" element={ <Signup /> } />
           <Route path="/event" element={ <EventHandling /> } />
+          <Route path="/state" element={ <Statemanagement /> } />
           <Route path="*" element={ <NotFound /> } />
         </Routes>
       </BrowserRouter>
