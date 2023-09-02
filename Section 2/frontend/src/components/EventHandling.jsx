@@ -14,7 +14,7 @@ const EventHandling = () => {
         <input type="text" className='form-control mt-4' onChange={(e) => {console.log(e.target.value)}} /> 
 
         <input type='color' className='mt-4' onChange={(e) => {console.log(e.target.value)}}/>   
-        <input type='color' className='mt-4' onChange={(e) => {document.body.style.backgroundColor = e.target.value}}/>      
+        <input type='color' className='mt-4' onChange={(e) => {document.body.style.backgroundColor = e.target.value}}/>              
 
         <input type="range" />       
     </div>
