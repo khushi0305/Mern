@@ -19,3 +19,12 @@
   justify-content: center;
   background-image: url('');
 }
+
+.myimg{
+  object-fit: contain;
+}
+
+.area{
+  width: 100%;
+  border-radius: 25px;
+}
