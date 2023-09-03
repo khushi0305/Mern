@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import EventHandling from './components/EventHandling';
 import Statemanagement from './components/Statemanagement';
 import Post from './components/Post';
+import Todo from './components/Todo';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/event" element={ <EventHandling /> } />
           <Route path="/state" element={ <Statemanagement /> } />
           <Route path="/post" element={ <Post /> } />
+          <Route path="/todo" element={ <Todo /> } />
           <Route path="*" element={ <NotFound /> } />
         </Routes>
       </BrowserRouter>
