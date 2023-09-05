@@ -36,6 +36,15 @@
 }
 
 .upd{
-  font-size: x-small;
-  
+  font-size: x-small; 
+}
+
+.my-card-img{
+  height: 200px;
+  object-fit: cover;
+  transition-duration: 0.3s;
+}
+
+.my-card-img:hover{
+  transform: scale(1.2);
 }

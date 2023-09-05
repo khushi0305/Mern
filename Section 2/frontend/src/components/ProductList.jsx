@@ -14,7 +14,7 @@ const ProductList = () => {
             {productsArray.map( (product) => (
                 <div className='col-md-3'>
                     <div className='card'>
-                        <img src= {product.image} alt="" />
+                        <img src= {product.image} alt="" className='my-card-img' />
                         <div className='card-body'>
                         <h4>{product.brand}</h4>
                         <h3>{product.model}</h3>
