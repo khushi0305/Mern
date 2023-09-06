@@ -15,7 +15,7 @@ const Chat = () => {
         const messageText = inputRef.current.value;
         console.log(messageText);
 
-        setMessageList([...messageList, {text : messageText, sent: true}])
+        setmessageList([...messageList, {text : messageText, sent: true}])
 
         inputRef.current.value = '';
     }
