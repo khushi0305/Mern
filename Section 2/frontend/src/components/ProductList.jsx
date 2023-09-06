@@ -17,7 +17,7 @@ const ProductList = () => {
 
     const filterBrand = (e) => {
         const search = e.target.value;
-        let filteredData = productData.filter( (product) => {return product.model.toLowerCase() === search.toLowerCase()});
+        let filteredData = productData.filter( (product) => {return product.brand === search});
 
         setproductsArray(filteredData); 
     }
@@ -38,7 +38,7 @@ const ProductList = () => {
                         <div className='card-body'>
                             <h3>Filter Options</h3>
                             <hr/>
-                            <select className='form-control'>
+                            <select className='form-control' onChange={filterBrand}>
                                 <option value="">Select Brand</option>
                                 {
                                     brands.map((b) => (<option value= {b}>{b}</option>))
