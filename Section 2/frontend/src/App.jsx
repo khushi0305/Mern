@@ -35,6 +35,7 @@ function App() {
           <Route path="/todo" element={ <Todo /> } />
           <Route path="/list" element={ <ProductList /> } />
           <Route path="/chat" element={ <Chat /> } />
+          <Route path="/dev" element={ <Dev /> } />
           <Route path="*" element={ <NotFound /> } />
         </Routes>
       </BrowserRouter>
