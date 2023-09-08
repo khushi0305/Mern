@@ -12,6 +12,7 @@ import Post from './components/Post';
 import Todo from './components/Todo';
 import ProductList from './components/ProductList';
 import Chat from './components/Chat';
+import Dev from './components/Dev';
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Route path="/todo" element={ <Todo /> } />
           <Route path="/list" element={ <ProductList /> } />
           <Route path="/chat" element={ <Chat /> } />
-          <Route path="/dev" element={ <Dev /> } />
+          <Route path="/dev" element={ <Dev/> } />
           <Route path="*" element={ <NotFound /> } />
         </Routes>
       </BrowserRouter>
