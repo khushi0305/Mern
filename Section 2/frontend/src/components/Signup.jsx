@@ -1,5 +1,14 @@
 import { useFormik } from 'formik'
 import React from 'react'
+import * as Yup from 'yup';         //copy from formik website validateschema
+
+const SignupSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Email is Required'),
+});
 
 const Signup = () => {
 
@@ -10,8 +19,13 @@ const Signup = () => {
       email : '',
       password : ''
     },
-  onSubmit: (values) => {console.log(values)}
+  onSubmit: (values, {resetForm}) => {
+    console.log(values);
+  resetForm()
   // send to backend
+  },
+
+  validationSchema: SignupSchema
   })
   return (
     <div className='py-5 vh-100 bg-body-secondary'>
@@ -22,9 +36,12 @@ const Signup = () => {
           
         <form onSubmit={signupForm.handleSubmit}>
           <label>Name</label>
+          
+          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.errors.name}</span>
           <input id='name' onChange={signupForm.handleChange} value={signupForm.values.name} type="text" className='form-control mb-3' />
           
           <label>Email</label>
+          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.errors.email}</span>
           <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-3' />
           
           <label>Password</label>
