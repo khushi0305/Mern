@@ -8,6 +8,10 @@ const SignupSchema = Yup.object().shape({
     .max(50, 'Too Long!')
     .required('Required'),
   email: Yup.string().email('Invalid email').required('Email is Required'),
+  password: Yup.string().required('Password is required')
+  .matches('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).+$', 'Password is invalid'),
+  confirm: Yup.string()
+  .oneOf([Yup.ref('password'), null], 'Passwords must match')
 });
 
 const Signup = () => {
@@ -17,7 +21,8 @@ const Signup = () => {
     initialValues:{
       name : '',
       email : '',
-      password : ''
+      password : '',
+      confirm : ''
     },
   onSubmit: (values, {resetForm}) => {
     console.log(values);
@@ -41,11 +46,16 @@ const Signup = () => {
           <input id='name' onChange={signupForm.handleChange} value={signupForm.values.name} type="text" className='form-control mb-3' />
           
           <label>Email</label>
-          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.touched.name && signupForm.errors.email}</span>
+          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.touched.email && signupForm.errors.email}</span>
           <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-3' />
           
           <label>Password</label>
+          <span style={{fontSize: 10, marginLeft: '10px', color: 'red'}}>{signupForm.touched.password && signupForm.errors.password}</span>
           <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-3' />
+
+          <label>Confirm Password</label>
+          <span style={{fontSize: 10, marginLeft: '10px', color: 'red'}}>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
+          <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-3' />
 
           <button type='submit' className='btn btn-primary w-100 mt-4'>Submit</button>
         </form>
