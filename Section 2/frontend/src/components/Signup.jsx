@@ -37,11 +37,11 @@ const Signup = () => {
         <form onSubmit={signupForm.handleSubmit}>
           <label>Name</label>
           
-          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.errors.name}</span>
+          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.touched.name && signupForm.errors.name}</span>
           <input id='name' onChange={signupForm.handleChange} value={signupForm.values.name} type="text" className='form-control mb-3' />
           
           <label>Email</label>
-          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.errors.email}</span>
+          <span style={{fontSize:10, marginLeft: '10px', color:'red'}}>{signupForm.touched.name && signupForm.errors.email}</span>
           <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-3' />
           
           <label>Password</label>
