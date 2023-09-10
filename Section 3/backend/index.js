@@ -5,6 +5,10 @@ const express = require('express');                                 //backend me
 const app = express();
 const port = 5000;
 
+app.get('/' , (req, res) => {
+    res.send('response from express');
+});
+
 app.listen(port, () => {
-    console.log('server started');
+    console.log('express server started');
 });
