@@ -9,6 +9,21 @@ app.get('/' , (req, res) => {
     res.send('response from express');
 });
 
+//home
+app.get('/home' , (req, res) => {
+    res.send('response from home');
+});
+
+//add
+app.get('/add' , (req, res) => {
+    res.send('response from add');
+});
+
+//getall
+app.get('/all' , (req, res) => {
+    res.send('response from all');
+});
+
 app.listen(port, () => {
-    console.log('express server started');
+    console.log('server started');
 });
