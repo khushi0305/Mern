@@ -2,12 +2,14 @@
 const express = require('express');                                 //backend me import karne k liye ye syntax use krte hain
 
 const userRouter = require('./routers/userRouter');                //importing userRouter file  ./ to import from same folder ../ to import from a folder just above this folder
+const productRouter = require('./routers/productRouter');
 //initialize express
 const app = express();
 const port = 5000;
 
 //middlewares
 app.use('/user', userRouter);
+app.use('/product', productRouter);
 
 //routes
 app.get('/' , (req, res) => {
