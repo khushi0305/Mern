@@ -7,7 +7,9 @@ const app = express();
 const port = 5000;
 
 //middlewares
+app.use('/user', userRouter);
 
+//routes
 app.get('/' , (req, res) => {
     res.send('response from express');
 });
