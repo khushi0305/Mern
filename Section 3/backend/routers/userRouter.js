@@ -1,5 +1,5 @@
 const express = require('express');                           //importing
-
+const Model = require('../models/userModel');
 const router = express.Router();
 
 router.get('/add', (req, res) => {
