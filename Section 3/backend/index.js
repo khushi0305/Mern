@@ -9,7 +9,9 @@ const productRouter = require('./routers/productRouter');
 const app = express();
 const port = 5000;
 
-//middlewares
+//middlewares (req me modification krke bhej dete hain)
+
+app.use(express.json());
 app.use('/user', userRouter);
 app.use('/product', productRouter);
 
