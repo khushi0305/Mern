@@ -4,7 +4,7 @@ const myschema = new Schema({
     name : String,
     email : String,
     password : String,
-    // phNo: String,
+    phNo: String,
     username: String
 });
 
