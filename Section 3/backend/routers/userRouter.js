@@ -33,12 +33,12 @@ router.get('/getbyemail/:email', (req, res) => {
 
     console.log(req.params.email);
 
-//     Model.find({email : req.params.email})
-//     .then((result) => {
-//         res.json(result);
-//     }).catch((err) => {
-//         res.json(err);
-//     });
+    Model.find({email : req.params.email})
+    .then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        res.json(err);
+    });
 })
 
 router.get('/getbyid', (req, res) => {
