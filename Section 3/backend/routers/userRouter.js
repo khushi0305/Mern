@@ -29,9 +29,9 @@ router.get('/getall', (req, res) => {
 });
 
 //: denotes url parameter
-// router.get('/getbyemail/:email', (req, res) => {
+router.get('/getbyemail/:email', (req, res) => {
 
-//     console.log(req.params.email);
+    console.log(req.params.email);
 
 //     Model.find({email : req.params.email})
 //     .then((result) => {
@@ -39,7 +39,7 @@ router.get('/getall', (req, res) => {
 //     }).catch((err) => {
 //         res.json(err);
 //     });
-// })
+})
 
 router.get('/getbyid', (req, res) => {
     res.send('respond from user getbyid')
