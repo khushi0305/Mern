@@ -13,6 +13,7 @@ router.post('/add', (req, res) => {
         res.json(err);
     });
 
+    console.log('something');
 
     // res.send('respond from user add')
 });
@@ -41,7 +42,7 @@ router.get('/getbyemail/:email', (req, res) => {
     });
 })
 
-router.get('/getbyid', (req, res) => {
+router.get('/getbyid/:id', (req, res) => {
     res.send('respond from user getbyid')
 });
 
