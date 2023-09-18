@@ -43,11 +43,25 @@ router.get('/getbyemail/:email', (req, res) => {
 })
 
 router.get('/getbyid/:id', (req, res) => {
-    res.send('respond from user getbyid')
+        Model.findById(req.params.id)
+    .then((result) => {
+        res.json(result);
+    })
+    .catch((err) => {
+        res.json(err);
+    });
+
+    // res.send('respond from user getbyid')
 });
 
-router.get('/update', (req, res) => {
-    res.send('respond from user update')
+router.put('/update/:id', (req, res) => {
+        Model.findByIdAndUpdate(req.params.id, req.body)
+    .then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        res.json(err);
+    });
+    // res.send('respond from user update')
 });
 
 router.get('/delete', (req, res) => {
