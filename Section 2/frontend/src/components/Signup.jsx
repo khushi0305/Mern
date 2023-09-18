@@ -24,9 +24,19 @@ const Signup = () => {
       password : '',
       confirm : ''
     },
-  onSubmit: (values, {resetForm}) => {
+  onSubmit: async (values, {resetForm}) => {                    //async- await used in place of then and catch but await k chakkar me now the function will not be asynchronous
     console.log(values);
-  resetForm()
+  resetForm();
+
+  const res = await fetch('http://localhost:5000/user/add', {             // fetch is an asynchronous function
+    method: 'POST',
+    body: JSON.stringify(values),
+    headers: {                                      //for additional information
+      'Content-Type': 'application/json'             //compulsory notation to tell data JSON lang me aa raha hai 
+    } 
+
+  });
+  console.log(res.status);
   // send to backend
   },
 
