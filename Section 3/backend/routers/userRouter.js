@@ -55,7 +55,7 @@ router.get('/getbyid/:id', (req, res) => {
 });
 
 router.put('/update/:id', (req, res) => {
-        Model.findByIdAndUpdate(req.params.id, req.body)
+        Model.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then((result) => {
         res.json(result);
     }).catch((err) => {
@@ -64,8 +64,15 @@ router.put('/update/:id', (req, res) => {
     // res.send('respond from user update')
 });
 
-router.get('/delete', (req, res) => {
-    res.send('respond from user delete')
+router.delete('/delete/:id', (req, res) => {
+    Model.findByIdAndDelete(req.params.id)
+    .then((result) => {
+        res.json(result);
+    })
+    .catch((err) => {
+        res.json(err);
+    });
+    // res.send('respond from user delete')
 });
 
 
