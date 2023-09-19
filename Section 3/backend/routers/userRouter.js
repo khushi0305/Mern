@@ -75,5 +75,18 @@ router.delete('/delete/:id', (req, res) => {
     // res.send('respond from user delete')
 });
 
+router.post('/authenticate', (req, res) => {
+    Model.findOne(req.body)
+    .then((result) => {
+        if(result)
+        res.json(result);
+    else
+    res.status(400).json({message: "Login Failed"});
+    }).catch((err) => {
+        console.log(err);
+        res.json(err)
+    });
+})
+
 
 module.exports = router;
