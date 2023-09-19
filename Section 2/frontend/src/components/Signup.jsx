@@ -42,10 +42,17 @@ const Signup = () => {
     Swal.fire({
       icon : 'success',
       title : 'Registered Successfully',
-      text : 'Login to Continue'
+      text : 'Login to Continue!'
     })
   }
-  // send to backend
+  else{
+    Swal.fire({
+      icon : 'error',
+      title: 'Error',
+      text: 'Something went wrong!'
+    })
+  }
+  // send values to backend
   },
 
   validationSchema: SignupSchema
