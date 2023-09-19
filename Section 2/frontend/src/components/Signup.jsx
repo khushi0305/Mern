@@ -1,5 +1,6 @@
 import { useFormik } from 'formik'
 import React from 'react'
+import Swal from 'sweetalert2';
 import * as Yup from 'yup';         //copy from formik website validateschema
 
 const SignupSchema = Yup.object().shape({
@@ -37,6 +38,13 @@ const Signup = () => {
 
   });
   console.log(res.status);
+  if(res.status === 200){
+    Swal.fire({
+      icon : 'success',
+      title : 'Registered Successfully',
+      text : 'Login to Continue'
+    })
+  }
   // send to backend
   },
 
