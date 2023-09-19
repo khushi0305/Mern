@@ -1,5 +1,6 @@
 import { useFormik } from 'formik'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import * as Yup from 'yup';         //copy from formik website validateschema
 
@@ -16,6 +17,8 @@ const SignupSchema = Yup.object().shape({
 });
 
 const Signup = () => {
+
+  const navigate = useNavigate();
 
   //initialize formik
   const signupForm = useFormik({
@@ -44,6 +47,7 @@ const Signup = () => {
       title : 'Registered Successfully',
       text : 'Login to Continue!'
     })
+    navigate('/login');
   }
   else{
     Swal.fire({
