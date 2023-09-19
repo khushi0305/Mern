@@ -1,5 +1,6 @@
-import { useFormik } from 'formik'
-import React from 'react'
+import { useFormik } from 'formik';
+import Swal from 'sweetalert2';
+import React from 'react';
 
 const Login = () => {
 
@@ -8,7 +9,38 @@ const Login = () => {
       email:'',
       password:''
     },
-    onSubmit: (values) => {console.log(values);}
+    onSubmit: async (values) => {console.log(values);
+    
+      const res = await fetch('http://localhost:5000/user/authenticate', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type' : 'application/json'
+        }
+      });
+
+      console.log(res.status);
+      if(res.status === 200){
+        Swal.fire({
+          icon : 'success',
+          title : 'Login Success'
+        })
+      }
+      else if(res.status === 400){
+        Swal.fire({
+          icon: 'error',
+          title: 'Login Failed',
+          text: 'Email or Password invalid!!'
+        })
+      }
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Login Failed!!'
+        })
+      }
+    }
   })
   return (
     <div className='py-5 vh-100 bg-body-secondary'>
