@@ -7,6 +7,12 @@ router.post('/add', (req, res) => {
     console.log(body.req);
 
     new Model(req.body).save()
+    .then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.json(err);
+    });
 })
 
 router.get('/getall', (req, res) => {
