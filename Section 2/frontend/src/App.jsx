@@ -13,10 +13,14 @@ import Todo from './components/Todo';
 import ProductList from './components/ProductList';
 import Chat from './components/Chat';
 import Dev from './components/Dev';
+import { useState } from 'react';
 
 function App() {
 
   let cartItems = 30;
+
+  const [loggedIn, setloggedIn] = useState(false);
+
   return (
     <div>
 
@@ -25,7 +29,7 @@ function App() {
       {/* <Link href='/login'>Login</Link><br/>
       <Link href='/signup'>Signup</Link> */}
 
-      <Navbar mycart = {cartItems}/>
+      <Navbar mycart = {cartItems} loggedIn= {loggedIn}/>
 
         <Routes>
           <Route path="/" element={ <Home /> } />

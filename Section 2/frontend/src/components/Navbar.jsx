@@ -1,8 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const Navbar = ({mycart}) => {
+const Navbar = ({mycart, loggedIn}) => {
   console.log(mycart);
+
+  const showLoginOptions = () => {
+    if(loggedIn){
+      return <li className='nav-item'>
+        <button className='btn btn-danger'>Logout</button>
+      </li>
+    }
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-danger">
   <div className="container-fluid">
@@ -73,7 +81,7 @@ const Navbar = ({mycart}) => {
           </NavLink>
         </li>
         <li className="nav-item">
-           <h4>Cart Items : {props.mycart}</h4>
+           <h4>Cart Items : {mycart}</h4>
         </li>
       </ul>
       {/* <form className="d-flex" role="search">
