@@ -33,7 +33,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/login" element={ <Login /> } />
+          <Route path="/login" element={ <Login setloggedIn= {setloggedIn} /> } />
           <Route path="/signup" element={ <Signup /> } />
           <Route path="/event" element={ <EventHandling /> } />
           <Route path="/state" element={ <Statemanagement /> } />
