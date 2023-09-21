@@ -71,8 +71,11 @@ const Navbar = () => {
            Dev Web
           </NavLink>
         </li>
+        <li className="nav-item">
+           <h4>Cart Items : {props.mycart}</h4>
+        </li>
       </ul>
-      <form className="d-flex" role="search">
+      {/* <form className="d-flex" role="search">
         <input
           className="form-control me-2"
           type="search"
@@ -82,7 +85,7 @@ const Navbar = () => {
         <button className="btn btn-outline-dark" type="submit">
           Search
         </button>
-      </form>
+      </form> */}
     </div>
   </div>
 </nav>

@@ -15,16 +15,17 @@ import Chat from './components/Chat';
 import Dev from './components/Dev';
 
 function App() {
+
+  let cartItems = 30;
   return (
     <div>
-      <h1>My React App</h1>
 
       <BrowserRouter>
 
       {/* <Link href='/login'>Login</Link><br/>
       <Link href='/signup'>Signup</Link> */}
 
-      <Navbar/>
+      <Navbar mycart = {cartItems}/>
 
         <Routes>
           <Route path="/" element={ <Home /> } />
