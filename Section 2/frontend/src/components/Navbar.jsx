@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  console.log(props.mycart);
   return (
     <nav className="navbar navbar-expand-lg bg-danger">
   <div className="container-fluid">
