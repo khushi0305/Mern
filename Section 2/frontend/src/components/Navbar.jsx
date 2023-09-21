@@ -83,6 +83,8 @@ const Navbar = ({mycart, loggedIn}) => {
         <li className="nav-item">
            <h4>Cart Items : {mycart}</h4>
         </li>
+
+        {showLoginOptions()}
       </ul>
       {/* <form className="d-flex" role="search">
         <input
