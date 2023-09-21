@@ -19,7 +19,7 @@ function App() {
 
   let cartItems = 30;
 
-  const [loggedIn, setloggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div>
@@ -29,11 +29,11 @@ function App() {
       {/* <Link href='/login'>Login</Link><br/>
       <Link href='/signup'>Signup</Link> */}
 
-      <Navbar mycart = {cartItems} loggedIn= {loggedIn}/>
+      <Navbar mycart = {cartItems} loggedIn= {loggedIn} setLoggedIn={setLoggedIn} />
 
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/login" element={ <Login setloggedIn= {setloggedIn} /> } />
+          <Route path="/login" element={ <Login setLoggedIn= {setLoggedIn} /> } />
           <Route path="/signup" element={ <Signup /> } />
           <Route path="/event" element={ <EventHandling /> } />
           <Route path="/state" element={ <Statemanagement /> } />

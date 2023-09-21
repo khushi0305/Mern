@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const Navbar = ({mycart, loggedIn}) => {
+const Navbar = ({mycart, loggedIn, setLoggedIn}) => {
   console.log(mycart);
 
   const showLoginOptions = () => {
     if(loggedIn){
       return <li className='nav-item'>
-        <button className='btn btn-dark'>Logout</button>
+        <button className='btn btn-dark' onClick={() => {setLoggedIn(false)}}>Logout</button>
       </li>
     }
   }
