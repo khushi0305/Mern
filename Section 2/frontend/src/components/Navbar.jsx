@@ -7,7 +7,7 @@ const Navbar = ({mycart, loggedIn}) => {
   const showLoginOptions = () => {
     if(loggedIn){
       return <li className='nav-item'>
-        <button className='btn btn-danger'>Logout</button>
+        <button className='btn btn-dark'>Logout</button>
       </li>
     }
   }
