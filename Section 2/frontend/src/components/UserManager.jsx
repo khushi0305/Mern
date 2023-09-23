@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const UserManager = () => {
+
+    const [userList, setuserList] = useState([])
 
     const getUserData = async () => {
         const res = await fetch ('http://localhost:5000/user/getall');
         console.log(res.status);
         const data = await res.json();
         console.table(data);
+        setuserList(data);
     }
 
     useEffect(() => {
