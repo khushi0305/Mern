@@ -74,6 +74,11 @@ const Navbar = ({mycart}) => {
            Product List
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/user">
+           User Manager
+          </NavLink>
+        </li>
         {/* <li className="nav-item">
           <NavLink className="nav-link" to="/chat">
            Chat

@@ -16,6 +16,7 @@ import Dev from './components/Dev';
 import { useState } from 'react';
 import UserAuth from './UserAuth';
 import { AppProvider } from './AppContext';
+import UserManager from './components/UserManager';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/todo" element={ <Todo /> } /> */}
           <Route path="/list" element={ <ProductList /> } />
           <Route path="/chat" element={ <UserAuth> <Chat /> </UserAuth> } />
+          <Route path="/user" element={ <UserManager /> } />
           {/* <Route path="/chat" element={ <Chat /> } />
           <Route path="/dev" element={ <Dev/> } /> */}
           <Route path="*" element={ <NotFound /> } />
