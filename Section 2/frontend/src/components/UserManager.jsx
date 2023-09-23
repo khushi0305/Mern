@@ -1,10 +1,51 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const UserManager = () => {
+
+    const getUserData = async () => {
+        const res = await fetch ('http://localhost:5000/user/getall');
+        console.log(res.status);
+        const data = await res.json();
+        console.table(data);
+    }
+
+    useEffect(() => {
+      
+    //when component opens
+      getUserData();
+    }, [])
+    
+    
   return (
     <div className='vh-100 bg-body-secondary'>
         <div className='container py-4'>
             <h1 className='text-center'>User Manager</h1>
+
+            <table className='table table-dark'>
+                <thead>
+                    <tr>
+                        <th>S. No.</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {
+                        userList.map( (user, index) => (
+                            <tr>
+                                <td>{index+1}</td>
+                                <td>{user._id}</td>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>{user.password}</td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
   )
