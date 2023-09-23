@@ -1,8 +1,11 @@
 import { useFormik } from 'formik';
 import Swal from 'sweetalert2';
 import React from 'react';
+import useAppContext from '../AppContext';
 
-const Login = ({setLoggedIn}) => {
+const Login = () => {
+
+  const { setLoggedIn } = useAppContext();
 
   const loginForm = useFormik({
     initialValues:{

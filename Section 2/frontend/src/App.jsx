@@ -14,6 +14,8 @@ import ProductList from './components/ProductList';
 import Chat from './components/Chat';
 import Dev from './components/Dev';
 import { useState } from 'react';
+import UserAuth from './UserAuth';
+import { AppProvider } from './AppContext';
 
 function App() {
 
@@ -25,6 +27,7 @@ function App() {
     <div>
 
       <BrowserRouter>
+      <AppProvider>
       {/* <Link href='/login'>Login</Link><br/>
       <Link href='/signup'>Signup</Link> */}
 
@@ -32,17 +35,20 @@ function App() {
 
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/login" element={ <Login setLoggedIn= {setLoggedIn} /> } />
+          <Route path="/login" element={ <Login /> } />
           <Route path="/signup" element={ <Signup /> } />
           <Route path="/event" element={ <EventHandling /> } />
           <Route path="/state" element={ <Statemanagement /> } />
-          <Route path="/post" element={ <Post /> } />
-          <Route path="/todo" element={ <Todo /> } />
+          <Route path="/todo" element={ <UserAuth> <Todo /> </UserAuth> } />
+          {/* <Route path="/post" element={ <Post /> } />
+          <Route path="/todo" element={ <Todo /> } /> */}
           <Route path="/list" element={ <ProductList /> } />
-          <Route path="/chat" element={ <Chat /> } />
-          <Route path="/dev" element={ <Dev/> } />
+          <Route path="/chat" element={ <UserAuth> <Chat /> </UserAuth> } />
+          {/* <Route path="/chat" element={ <Chat /> } />
+          <Route path="/dev" element={ <Dev/> } /> */}
           <Route path="*" element={ <NotFound /> } />
         </Routes>
+        </AppProvider>
       </BrowserRouter>
 
     </div>
