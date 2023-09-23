@@ -1,19 +1,23 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import useAppContext from '../AppContext';
 
-const Navbar = ({mycart, loggedIn, setLoggedIn}) => {
-  console.log(mycart);
+const Navbar = ({mycart}) => {
+  // console.log(mycart);
+
+  const {loggedIn, setLoggedIn, logout} = useAppContext();
 
   const showLoginOptions = () => {
     if(loggedIn){
-      return <li className='nav-item'>
+      return (<li className='nav-item'>
         <button className='btn btn-dark' onClick={() => {setLoggedIn(false)}}>Logout</button>
       </li>
+      );
     }
   }
   return (
     <nav className="navbar navbar-expand-lg bg-danger">
-  <div className="container-fluid">
+  <div className="container">
     <a className="navbar-brand" href="#">
       Navbar
     </a>
@@ -55,11 +59,11 @@ const Navbar = ({mycart, loggedIn, setLoggedIn}) => {
            State Management
           </NavLink>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <NavLink className="nav-link" to="/post">
            Post
           </NavLink>
-        </li>
+        </li> */}
         <li className="nav-item">
           <NavLink className="nav-link" to="/todo">
            Todo List
@@ -70,16 +74,16 @@ const Navbar = ({mycart, loggedIn, setLoggedIn}) => {
            Product List
           </NavLink>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <NavLink className="nav-link" to="/chat">
            Chat
           </NavLink>
-        </li>
-        <li className="nav-item">
+        </li> */}
+        {/* <li className="nav-item">
           <NavLink className="nav-link" to="/dev">
            Dev Web
           </NavLink>
-        </li>
+        </li> */}
         <li className="nav-item">
            <h4>Cart Items : {mycart}</h4>
         </li>
