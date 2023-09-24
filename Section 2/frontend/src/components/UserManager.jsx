@@ -22,7 +22,9 @@ const UserManager = () => {
         console.log(id);
     };
     
-    //
+    //fetch
+    // onsubmit: 
+    // const res = await fetch('http://localhost:5000/user/delete')
     
   return (
     <div className='vh-100 bg-body-secondary'>
