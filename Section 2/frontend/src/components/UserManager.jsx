@@ -6,9 +6,9 @@ const UserManager = () => {
 
     const getUserData = async () => {
         const res = await fetch ('http://localhost:5000/user/getall');
-        console.log(res.status);
+        // console.log(res.status);
         const data = await res.json();
-        console.table(data);
+        // console.table(data);
         setuserList(data);
     }
 
@@ -21,10 +21,6 @@ const UserManager = () => {
     const deleteUser = (id) => {
         console.log(id);
     };
-    
-    //fetch
-    // onsubmit: 
-    // const res = await fetch('http://localhost:5000/user/delete')
     
   return (
     <div className='vh-100 bg-body-secondary'>
