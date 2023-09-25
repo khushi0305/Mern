@@ -18,8 +18,16 @@ const UserManager = () => {
       getUserData();
     }, [])
 
-    const deleteUser = (id) => {
-        console.log(id);
+    const deleteUser = async (id) => {
+        const res = await fetch('http://localhost:5000/user/delete/'+id, {
+            method:'DELETE'
+        })
+        console.log(res.status);
+
+        if(res.status === 200)
+        getUserData();
+    
+        // console.log(id);
     };
     
   return (
