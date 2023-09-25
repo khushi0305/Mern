@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useState } from 'react';
 
 const Todo = () => {
 
@@ -41,10 +42,22 @@ const Todo = () => {
                 <div className='card-body p-0'>
 
                     {/* {todoList.map( (todo, index) => {return <p>{todo}</p>})} */}
-                    {todoList.map( (todo, index) => {return <div className={`d-flex justify-content-between p-4 ${index%2===0 ? 'bg-body-secondary' : ''}`}>
+
+                    <AnimatePresence mode="popLayout">
+                    {todoList.map( (todo, index) => {
+                        return (<motion.div
+                        layout
+                        initial ={{ x: "100%", opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit ={{x: "100%", opacity: 0 }}
+                        transition={{ duration: 0.3, type:'spring' }}
+                        key={todo}
+                        className={`d-flex justify-content-between p-4 ${index%2===0 ? 'bg-body-secondary' : ''}`}>
                         <h5>{todo}</h5>
                         <button className='btn btn-danger' onClick={() => {removeTodo(index)}}>Delete</button>
-                        </div>})}
+                        </motion.div>)
+                    })}
+                        </AnimatePresence>
                 </div>
             </div>
         </div>
