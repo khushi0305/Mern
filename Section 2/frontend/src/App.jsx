@@ -17,6 +17,7 @@ import { useState } from 'react';
 import UserAuth from './UserAuth';
 import { AppProvider } from './AppContext';
 import UserManager from './components/UserManager';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div>
-
+      <Toaster position='top-right'/>
       <BrowserRouter>
       <AppProvider>
       {/* <Link href='/login'>Login</Link><br/>

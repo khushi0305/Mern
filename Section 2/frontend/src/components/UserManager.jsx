@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
 
 const UserManager = () => {
 
@@ -26,7 +27,7 @@ const UserManager = () => {
 
         if(res.status === 200)
         getUserData();
-    
+    toast.success('User Deleted Successfully')
         // console.log(id);
     };
     
