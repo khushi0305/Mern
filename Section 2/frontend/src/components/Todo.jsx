@@ -50,7 +50,7 @@ const Todo = () => {
                         initial ={{ x: "100%", opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         exit ={{x: "100%", opacity: 0 }}
-                        transition={{ duration: 0.3, type:'spring' }}
+                        transition={{ duration: 0.3, type:'spring', damping: 5 }}
                         key={todo}
                         className={`d-flex justify-content-between p-4 ${index%2===0 ? 'bg-body-secondary' : ''}`}>
                         <h5>{todo}</h5>
