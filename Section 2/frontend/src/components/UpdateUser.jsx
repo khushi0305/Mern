@@ -1,11 +1,14 @@
 import { Formik } from 'formik';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateUser = () => {
 //get by url parameter
     const {id} = useParams();
     const [userData, setUserData] = useState(null);
+
+    
 
     const fetchUserData = async () => {
         const res = await fetch('http://localhost:5000/user/getbyid/'+id);
@@ -22,8 +25,21 @@ const UpdateUser = () => {
     const submitForm = async (values) => {
         const res = await fetch('https://localhost:5000/user/update/'+id, {
             method: 'PUT',
-            body: JSON.stringify
+            body: JSON.stringify(values),
+            headers: {
+                'Content-Type' : "application/json"
+            }
         })
+
+        console.log(res.status);
+
+        if(res.status === 200){
+            Swal.fire({
+                icon : 'success',
+                title: 'updated',
+                text : 'user updated successfully'
+            })
+        }
         console.log(values);
     }
 
