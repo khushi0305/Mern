@@ -8,7 +8,7 @@ const UpdateUser = () => {
     const {id} = useParams();
     const [userData, setUserData] = useState(null);
 
-    
+    const navigate = useNavigate();
 
     const fetchUserData = async () => {
         const res = await fetch('http://localhost:5000/user/getbyid/'+id);
@@ -39,6 +39,7 @@ const UpdateUser = () => {
                 title: 'updated',
                 text : 'user updated successfully'
             })
+            navigate('/usermanager');
         }
         console.log(values);
     }
