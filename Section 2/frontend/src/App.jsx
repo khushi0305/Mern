@@ -18,6 +18,7 @@ import UserAuth from './UserAuth';
 import { AppProvider } from './AppContext';
 import UserManager from './components/UserManager';
 import { Toaster } from 'react-hot-toast';
+import UpdateUser from './components/UpdateUser';
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="/list" element={ <ProductList /> } />
           <Route path="/chat" element={ <UserAuth> <Chat /> </UserAuth> } />
           <Route path="/user" element={ <UserManager /> } />
+          <Route path="/updateuser/:id" element={ <UpdateUser /> } />
           {/* <Route path="/chat" element={ <Chat /> } />
           <Route path="/dev" element={ <Dev/> } /> */}
           <Route path="*" element={ <NotFound /> } />

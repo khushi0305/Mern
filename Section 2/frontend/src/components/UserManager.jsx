@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
+import { Link } from "react-router-dom";
 
 const UserManager = () => {
 
@@ -11,7 +12,7 @@ const UserManager = () => {
         const data = await res.json();
         // console.table(data);
         setuserList(data);
-    }
+    };
 
     useEffect(() => {
       
@@ -25,11 +26,12 @@ const UserManager = () => {
         })
         console.log(res.status);
 
-        if(res.status === 200)
+        if(res.status === 200){
         getUserData();
     toast.success('User Deleted Successfully')
         // console.log(id);
-    };
+    }
+}
     
   return (
     <div className='vh-100 bg-body-secondary'>
@@ -58,6 +60,9 @@ const UserManager = () => {
                                 <td>{user.email}</td>
                                 <td>{user.password}</td>
                                 <td>
+                  <Link to={"/updateuser/"+user._id} className="btn btn-primary">Edit</Link>
+                </td>
+                                <td>
                                     <button className='btn btn-primary'>Edit</button>
                                 </td>
                                 <td>
@@ -75,4 +80,4 @@ const UserManager = () => {
   )
 }
 
-export default UserManager
+export default UserManager;
