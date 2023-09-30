@@ -10,7 +10,7 @@ const Navbar = ({mycart}) => {
   const showLoginOptions = () => {
     if(loggedIn){
       return (<li className='nav-item'>
-        <button className='btn btn-dark' onClick={() => {setLoggedIn(false)}}>Logout</button>
+        <button className='btn btn-dark' onClick= {logout}>Logout</button>
       </li>
       );
     }
