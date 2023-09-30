@@ -20,6 +20,7 @@ import UserManager from './components/UserManager';
 import { Toaster } from 'react-hot-toast';
 import UpdateUser from './components/UpdateUser';
 import { CartProvider } from './CartContext';
+import CartPage from './components/CartPage';
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/chat" element={ <UserAuth> <Chat /> </UserAuth> } />
           <Route path="/user" element={ <UserManager /> } />
           <Route path="/updateuser/:id" element={ <UpdateUser /> } />
+          <Route path="/cart" element={ <CartPage /> } />
           {/* <Route path="/chat" element={ <Chat /> } />
           <Route path="/dev" element={ <Dev/> } /> */}
           <Route path="*" element={ <NotFound /> } />

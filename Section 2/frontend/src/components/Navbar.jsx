@@ -92,6 +92,11 @@ const Navbar = ({mycart}) => {
           </NavLink>
         </li> */}
         <li className="nav-item">
+          <NavLink className="nav-link" to="/cart">
+           Cart Page
+          </NavLink>
+        </li>
+        <li className="nav-item">
            <h4>Cart Items : {cartItems.length}</h4>
         </li>
 
