@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import productData from './dummyData'
+import useCartContext from '../CartContext';
 
 const ProductList = () => {
 
     const [productsArray, setproductsArray] = useState(productData);
+
+    const {addItemToCart}= useCartContext();
 
     const brands = ['Asus' , 'Lenevo' , 'HP' , 'Dell' , 'Apple']
 
