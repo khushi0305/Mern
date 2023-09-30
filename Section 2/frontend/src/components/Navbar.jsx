@@ -1,11 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import useAppContext from '../AppContext';
+import useCartContext from '../CartContext';
 
 const Navbar = ({mycart}) => {
   // console.log(mycart);
 
   const {loggedIn, setLoggedIn, logout} = useAppContext();
+  const {cartItems} = useCartContext();
 
   const showLoginOptions = () => {
     if(loggedIn){
