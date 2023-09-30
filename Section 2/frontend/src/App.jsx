@@ -19,6 +19,7 @@ import { AppProvider } from './AppContext';
 import UserManager from './components/UserManager';
 import { Toaster } from 'react-hot-toast';
 import UpdateUser from './components/UpdateUser';
+import { CartProvider } from './CartContext';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
       <Toaster position='top-right'/>
       <BrowserRouter>
       <AppProvider>
+        <CartProvider>
       {/* <Link href='/login'>Login</Link><br/>
       <Link href='/signup'>Signup</Link> */}
 
@@ -53,6 +55,7 @@ function App() {
           <Route path="/dev" element={ <Dev/> } /> */}
           <Route path="*" element={ <NotFound /> } />
         </Routes>
+        </CartProvider>
         </AppProvider>
       </BrowserRouter>
 
