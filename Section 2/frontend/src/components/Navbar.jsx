@@ -92,7 +92,7 @@ const Navbar = ({mycart}) => {
           </NavLink>
         </li> */}
         <li className="nav-item">
-           <h4>Cart Items : {mycart}</h4>
+           <h4>Cart Items : {cartItems.length}</h4>
         </li>
 
         {showLoginOptions()}
