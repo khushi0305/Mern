@@ -53,6 +53,7 @@ function App() {
           <Route path="/user" element={ <UserManager /> } />
           <Route path="/updateuser/:id" element={ <UpdateUser /> } />
           <Route path="/cart" element={ <CartPage /> } />
+          <Route path="/chart" element={ <UsingCharts /> } />
           {/* <Route path="/chat" element={ <Chat /> } />
           <Route path="/dev" element={ <Dev/> } /> */}
           <Route path="*" element={ <NotFound /> } />
