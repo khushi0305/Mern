@@ -16,7 +16,7 @@ const CartPage = () => {
         </thead>
         <tbody>
           {
-            cartItems.map((item) => (
+            cartItems.map((item, index) => (
                 <tr>
                   <td>
                     <img height={75} src={item.image} alt=''/>
@@ -24,6 +24,9 @@ const CartPage = () => {
                   <td>{item.brand} {item.model}</td>
                   <td>{item.price}</td>
                   <td>{item.rating}</td>
+                  <td>
+                    <button className='btn btn-danger' onClick={() => {removeItemFromCart(index)}}>Delete Item</button>
+                  </td>
                 </tr>
             ))
           }
