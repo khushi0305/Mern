@@ -93,7 +93,7 @@ const Navbar = ({mycart}) => {
         </li> */}
         <li className="nav-item">
           <NavLink className="nav-link" to="/cart">
-           Cart Page
+           Cart
           </NavLink>
         </li>
         <li className="nav-item">
