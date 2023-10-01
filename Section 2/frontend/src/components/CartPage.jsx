@@ -2,7 +2,7 @@ import React from 'react'
 import useCartContext from '../CartContext'
 
 const CartPage = () => {
-    const {cartItems} = useCartContext();
+    const {cartItems, removeItemFromCart} = useCartContext();
 
     const displayCartItems = () => {
       return <table className='table'>

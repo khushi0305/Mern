@@ -10,7 +10,13 @@ export const CartProvider = ({children})=> {
         setcartItems([...cartItems , item]);
     }
 
-    return <CartContext.Provider value={{cartItems, setcartItems, addItemToCart}}>
+    const removeItemFromCart = (index) => {
+        let temp = cartItems;
+        temp.splice(index,1)
+        setcartItems([...temp]);
+    }
+
+    return <CartContext.Provider value={{cartItems, setcartItems, addItemToCart, removeItemFromCart}}>
         {children}
     </CartContext.Provider>
 };
