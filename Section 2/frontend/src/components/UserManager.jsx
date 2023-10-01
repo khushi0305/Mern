@@ -62,9 +62,7 @@ const UserManager = () => {
                                 <td>
                   <Link to={"/updateuser/"+user._id} className="btn btn-primary">Edit</Link>
                 </td>
-                                <td>
-                                    <button className='btn btn-primary'>Edit</button>
-                                </td>
+                               
                                 <td>
                                     <button
                                     onClick={() => {deleteUser(user._id)}} 
