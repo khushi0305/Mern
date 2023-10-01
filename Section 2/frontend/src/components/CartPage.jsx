@@ -5,6 +5,7 @@ const CartPage = () => {
     const {cartItems, removeItemFromCart} = useCartContext();
 
     const displayCartItems = () => {
+      if(!cartItems.length) return<h1 className='text-center display-4 text-muted'>Cart is Empty :( </h1>
       return <table className='table'>
         <thead>
           <tr>
