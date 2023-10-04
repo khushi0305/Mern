@@ -21,6 +21,7 @@ import { Toaster } from 'react-hot-toast';
 import UpdateUser from './components/UpdateUser';
 import { CartProvider } from './CartContext';
 import CartPage from './components/CartPage';
+import UsingCharts from './components/UsingCharts';
 
 function App() {
 
